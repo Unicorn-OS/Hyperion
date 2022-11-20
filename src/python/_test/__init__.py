@@ -1,5 +1,12 @@
-import connect
+import list.domain
+from instance import *
 
-conn = connect.init()
+def getSingle():
+    uuid = getUUID(7)
+    print(uuid)
+    domain = getByID(7)
+    print(domain.info(), domain.OSType())
 
-print(conn)
+
+print("Off ", list.domain.inactive())
+print("all ", list.domain.all())

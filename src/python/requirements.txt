@@ -1,0 +1,1 @@
+libvirt-python==8.9.0
