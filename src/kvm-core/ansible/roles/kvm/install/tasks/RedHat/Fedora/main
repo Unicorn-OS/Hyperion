@@ -1,0 +1,16 @@
+---
+# https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/
+
+- name: install virtualization group
+  ansible.builtin.dnf:
+    name:
+      - "@virtualization"
+    state: latest
+  become: true
+
+- name: Enable libvirtd service
+  ansible.builtin.systemd:
+    name: libvirtd
+    state: started
+    enabled: true
+  become: true
