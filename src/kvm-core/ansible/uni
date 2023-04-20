@@ -1,5 +1,5 @@
 ---
-- hosts: local #, fedora, ubuntu
+- hosts: fedora #, ubuntu
   vars:
     somevar: "value"
     source: "package"
