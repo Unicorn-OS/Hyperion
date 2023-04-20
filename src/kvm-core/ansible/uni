@@ -1,8 +1,7 @@
 ---
-- hosts: fedora #, ubuntu
+- hosts: fedora #, ubuntu, local
   vars:
     somevar: "value"
-    source: "package"
 
   roles:
   - kvm
