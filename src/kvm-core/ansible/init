@@ -1,7 +1,26 @@
-this=`pwd`
-cd .this/inventory
+setup_inventory(){
+echo "inventory/test" >.this/.gitignore
 
-sh init-host.sh
-cd $this
+# Copy .example to test if it doesn't exist
+cd .this/inventory/
+[ ! -d "test" ] && cp -r .example test
+cd -
+}
 
-ansible-playbook uni
+update(){
+if [ -f "update.yml" ]; then
+    ansible-playbook update.yml
+fi
+}
+
+test(){
+ansible -m ping test
+}
+
+main(){
+setup_inventory
+update
+test
+}
+
+main
