@@ -1,0 +1,10 @@
+---
+- hosts: node, local
+  gather_facts: yes
+
+  roles:
+  - .my
+  - this
+  - optional
+  - kvm
+  - Virt-Manager

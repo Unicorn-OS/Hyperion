@@ -1,0 +1,3 @@
+dependencies:
+- kvm/core
+- kvm/load kvm module

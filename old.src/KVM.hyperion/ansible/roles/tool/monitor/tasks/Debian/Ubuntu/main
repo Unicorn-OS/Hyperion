@@ -1,0 +1,6 @@
+---
+- name: Install virt-top
+  apt:
+    pkg:
+    - virt-top
+  become: true

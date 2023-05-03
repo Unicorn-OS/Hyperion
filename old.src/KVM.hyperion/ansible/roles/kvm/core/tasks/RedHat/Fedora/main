@@ -1,0 +1,11 @@
+---
+
+- name: install headless KVM
+  dnf:
+    name:
+      - qemu-kvm
+      - libvirt
+      - virt-install
+    state: latest
+  become: true
+  notify: start libvirtd
