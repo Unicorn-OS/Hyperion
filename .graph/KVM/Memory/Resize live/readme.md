@@ -8,6 +8,6 @@ https://www.unixarena.com/2015/12/linux-kvm-how-to-add-remove-memory-to-guest-on
 
 ```
 vm=
-size=
+size=8
 virsh setmem $vm ${size}G
 ```
